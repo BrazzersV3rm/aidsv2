@@ -1,4 +1,4 @@
-int __cdecl sub_548960(int a1, int a2)
+int __cdecl sub_75DD70(int a1, int a2)
 {
   int v2; // eax@3
   int v3; // eax@4
@@ -7,25 +7,25 @@ int __cdecl sub_548960(int a1, int a2)
   int v6; // edi@6
   _BYTE *retaddr; // [sp+Ch] [bp+4h]@6
 
-  if ( *(_DWORD *)(*(_DWORD *)(a1 + 8) + a1 + 96) >= *(_DWORD *)(*(_DWORD *)(a1 + 8) + a1 + 84) )
-    sub_5417D0(a1);
-  v2 = *(_DWORD *)(a1 + 12);
+  if ( *(_DWORD *)(*(_DWORD *)(a1 + 32) + a1 + 112) >= *(_DWORD *)(*(_DWORD *)(a1 + 32) + a1 + 104) )
+    luaC_step(a1);
+  v2 = *(_DWORD *)(a1 + 16);
   if ( v2 == *(_DWORD *)(a1 + 40) )
-    v3 = *(_DWORD *)(a1 + 104);
+    v3 = *(_DWORD *)(a1 + 96);
   else
-    v3 = *(_DWORD *)(**(_DWORD **)(v2 + 16) + 12);
-  v4 = ((int (__cdecl *)(int, int, int))loc_544C30)(a1, a2, v3);
-  v5 = *(_DWORD *)(a1 + 16);
+    v3 = *(_DWORD *)(**(_DWORD **)(v2 + 8) + 12);
+  v4 = sub_759950(a1, a2, v3);
+  v5 = *(_DWORD *)(a1 + 12);
   v6 = v4;
   *(_DWORD *)v5 = v4;
   *(_DWORD *)(v5 + 8) = 8;
-  *(_DWORD *)(a1 + 16) += 16;
-  if ( retaddr - (_BYTE *)unusedPadding >= (unsigned int)&loc_BA3A09 + 1
-    && (unsigned int)(retaddr - (_BYTE *)sub_1AAA000) >= 0x124A67 )
+  *(_DWORD *)(a1 + 12) += 16;
+  if ( retaddr - (_BYTE *)sub_401000 >= (unsigned int)&loc_BA6056
+    && (unsigned int)(retaddr - (_BYTE *)sub_1AC0000) >= 0x114CF8 )
   {
-    dword_1476130 |= 0x200000u;
-    dword_1A36A04 = 0;
-    sub_54E180(a1);
+    dword_15A0E88 |= 0x200000u;
+    dword_15A2EF4 = 0;
+    sub_59F770();
   }
   return v6 + 24;
 }
